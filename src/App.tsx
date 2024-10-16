@@ -46,7 +46,7 @@ export default function App() {
     return (!startDate || itemDate >= start) && (!endDate || itemDate <= end);
   });
 
-  const totalAmount = data?.reduce(
+  const totalAmount = filteredTransactions?.reduce(
     (acc, transaction) => acc + transaction.amount,
     0
   );
